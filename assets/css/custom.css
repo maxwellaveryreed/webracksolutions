@@ -2684,7 +2684,7 @@ a:hover {
 }
 
 .header-logo {
-    width: 150px;
+    width: 150px !important;
 }
 
 /* Preloader -------------------------------------------------------*/
