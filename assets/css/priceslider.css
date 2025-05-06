@@ -1,0 +1,237 @@
+/*
+ * jQuery UI Slider 1.8.18
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: -1px;
+	height: 20px;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: -1px;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+.slider-container h3 {
+	margin:0 0 10px;
+	padding:0;
+	color:#333;
+	font-size:30px;
+	line-height:30px;
+	font-weight:normal;
+}
+.slider-container p {
+	margin:0;
+	padding:0;
+}
+.sliderbox {
+    float: left;
+    width: 100%;
+    border: 1px solid var(--black-color);
+    border-radius: 14px;
+    overflow: hidden;
+}
+.vps-price-plan {
+    width: 140px;
+}
+.slider-container #slider {
+    margin: 0 auto 20px;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    background: var(--primary-color);
+    border: 1px solid var(--black-color);
+    border-radius: 6px;
+}
+.slider-container #slider .ui-slider-range {
+    background: #1e0d6f;
+    background-size: contain;
+    border-radius: 6px;
+}
+.slider-container #slider .ui-slider-handle {
+	outline: none;
+	background: url(../images/handle.png) no-repeat left top;
+	border-radius: 0;
+	border: 0;
+	width: 36px;
+	height: 36px;
+	margin-top: -4px;
+	margin-left: -28px;
+	transition: none; 
+}
+.slider-container #slider .ui-slider-handle:hover {
+	cursor: pointer;
+}
+.price_rangetxt {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18% 4%;
+    justify-content: center;
+}
+.price_rangetxt div.icon {
+    color: var(--secondary-color);
+    font-size: 24px;
+    line-height: 30px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.price_rangetxt div.current {
+	color: var(--primary-color);
+}
+.price_content {
+    width: 100%;
+    background: var(--primary-color);
+    float: left;
+    padding: 32px 58px 32px 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price_content .smallbox {
+    display: flex;
+	align-items: baseline;
+    gap: 12px;
+}
+.slider-outer {
+    background: var(--button-color);
+    padding: 37px 58px 22px;
+    border-bottom: 1px solid var(--black-color);
+}
+.price_content .heading {
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--text-color);
+	font-weight: 700;
+    display: block;
+    margin-bottom: 14px;
+}
+.price_content .value {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--secondary-color);
+    margin-left: -21px;
+}
+.price_content .smallbox:last-child {
+	margin:0;
+	border-right:none;
+}
+/*.price_box {
+	margin:0 auto;
+	width: 335px;
+}*/
+.price_txt {
+    display: flex;
+}
+#backup_val {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.price_txt .dollar{
+    color: var(--text-color);
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    left: 5px;
+    padding-right: 12px;
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+.month-title small {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: -2px;
+    display: block;
+}
+.month-title{
+	padding-left: 5px;
+}
+.vps-price-plan p {
+    font-size: 14px;
+    padding-left: 30px;
+}
+.price_txt .numeric1 {
+    color: var(--button-color);
+    line-height: 44px;
+    font-size: 48px;
+    font-weight: 700;
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+.vps_btn.generic-btn a{
+	border-color: var(--button-color);
+	color: var(--black-color);
+	background: var(--button-color);
+}
+.vps_btn.generic-btn a:hover{
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.price_txt .numeric2 {
+	color: var(--text-color);
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 24px;
+	font-family: "Plus Jakarta Sans", sans-serif;
+    display: block;
+}
+.product-con {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--black-color);
+    padding-bottom: 27px;
+    margin-bottom: 34px;
+}
